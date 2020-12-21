@@ -15,7 +15,41 @@ class _AuthenState extends State<Authen> {
           children: [
             buildLogo(),
             buildAppName(),
+            buildUser(),
+            buildPassword(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Container buildUser() {
+    return Container(
+      margin: EdgeInsets.only(top: 16),
+      width: 250,
+      child: TextField(
+        decoration: InputDecoration(
+          prefixIcon: Icon(Icons.rowing),
+          hintText: 'User:',
+          border: OutlineInputBorder(),
+        ),
+      ),
+    );
+  }
+
+  Container buildPassword() {
+    return Container(
+      margin: EdgeInsets.only(top: 16),
+      width: 250,
+      child: TextField(obscureText: true,
+        decoration: InputDecoration(
+          suffixIcon: IconButton(
+            icon: Icon(Icons.remove_red_eye),
+            onPressed: () {},
+          ),
+          prefixIcon: Icon(Icons.lock),
+          hintText: 'User:',
+          border: OutlineInputBorder(),
         ),
       ),
     );
